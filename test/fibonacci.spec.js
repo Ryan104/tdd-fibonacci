@@ -7,8 +7,19 @@ describe('Testing fibonacci', function () {
         expect(fibonacci).to.be.a('function');
     });
     // TODO: implement remaining unit tests
-    it('should return 1 for the first number');
-    it('should return 1 for the second number');
-    it('should return 13 for index 6');
-    it('should return 0 for negative index');
+    it('should return 1 for the first number', function(){
+    	expect(fibonacci(0)).to.equal(1);
+    });
+    it('should return 1 for the second number', function(){
+    	expect(fibonacci(1)).to.equal(1);
+    });
+    it('should return 13 for index 6', function(){
+    	expect(fibonacci(6)).to.equal(13);
+    });
+    it('should return 0 for negative index', function(){
+    	expect(fibonacci(-1)).to.equal(0);
+    });
+    it('should return 0 for non numbers', function(){
+    	expect(fibonacci('cat')).to.equal(0);
+    });
 });
